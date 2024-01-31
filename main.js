@@ -29,12 +29,33 @@ const app = createApp({
           state: true,
         },
       ],
+
+      newTask: {
+        name: "",
+        state: false,
+      },
     };
   },
 
   methods: {
     deleteTasks(index) {
       this.tasks.splice(index, 1);
+    },
+
+    AddTasck() {
+      const nuovaTask = { ...this.newTask };
+
+      if (!nuovaTask.name) {
+        alert("non hai inserito");
+        return;
+      }
+      this.tasks.push(nuovaTask);
+
+      this.newTask.name = "";
+    },
+
+    changeState(index) {
+      this.tasks.state.invert;
     },
   },
 });

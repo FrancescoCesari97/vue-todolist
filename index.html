@@ -30,14 +30,14 @@
             <h2>Nuova Task</h2>
 
             <label for=""></label>
-            <input type="text " class="form-control">
-            <button class="btn btn-primary my-4">Aggiungi </button>
+            <input v-model.trim="newTask.name"  @keyUp.enter="AddTasck()" type="text " class="form-control">
+            <button @click="AddTasck()" class="btn btn-primary my-4">Aggiungi </button>
 
             <div class="row">
                 <div class="col-6">
                     <h3>Task da Completare</h3>
-                    <ul class="p-0">
-                        <li v-for="(task, index) in tasks" v-show="!task.state" :class="task.state ? 'text-decoration-line-through' : '' " class="task rounded my-3">
+                    <ul  class="p-0">
+                        <li v-for="(task, index) in tasks" @click="changeState(index)" v-show="!task.state" :class="task.state ? 'text-decoration-line-through' : '' " class="task rounded my-3">
                             <div>
                                {{ task.name}}
                             </div>
