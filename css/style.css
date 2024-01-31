@@ -10,24 +10,13 @@ img{
     max-width: 100%;
 }
 
-ul{
-    list-style: none;
-
-}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(121, 75, 15);
 }
 
-li{
-    display: inline-block;
-}
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
 
 
 /* utlis */
@@ -45,4 +34,21 @@ a{
     min-height: 80px;
     background-color: rgb(216, 163, 98);
     padding: 2rem;
+}
+
+
+.task{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
+.task i{
+    cursor: pointer;
+}
+
+.line-through{
+    text-decoration: line-through;
 }
