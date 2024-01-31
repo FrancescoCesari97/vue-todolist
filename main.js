@@ -55,7 +55,11 @@ const app = createApp({
     },
 
     changeState(index) {
-      this.tasks.state.invert;
+      if (this.tasks[index].state == false) {
+        this.tasks[index].state = true;
+      } else if (this.tasks[index].state == true) {
+        this.tasks[index].state = false;
+      }
     },
   },
 });

@@ -53,7 +53,7 @@
                 <div class="col-6">
                     <h3>Task Completate</h3>
                     <ul class="p-0">
-                        <li v-for="(task, index) in tasks" v-show="task.state" :class="task.state ? 'text-decoration-line-through' : '' "class="task rounded my-3">
+                        <li v-for="(task, index) in tasks"  @click="changeState(index)" v-show="task.state" :class="task.state ? 'text-decoration-line-through' : '' "class="task rounded my-3">
                             <div>
                                {{ task.name}}
                             </div>
